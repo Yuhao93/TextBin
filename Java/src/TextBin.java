@@ -139,20 +139,6 @@ public class TextBin{
     return null;
   }
   
-  // Expand array, filling end with space character 
-  private static byte[] fillArray(byte[] b){
-    byte[] buffer = new byte[16 * ((b.length / 16) + 1)];
-    for(int i = 0; i < buffer.length; i ++){
-      if(i >= b.length){
-        buffer[i] = 0;
-      }else{
-        buffer[i] = b[i];
-      }
-    }
-    
-    return buffer;
-  }
-  
   // Generate a 16 byte string hash of password
   private static String hash(String str){
     try{
